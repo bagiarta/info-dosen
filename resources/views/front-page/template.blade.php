@@ -3594,6 +3594,9 @@
                     <a href="{{ route('info-dosen.index') }}" class="nav-button w-inline-block">
                         <div>Lecturer Info</div>
                     </a>
+                    <a href="{{ route('login') }}" class="nav-button w-inline-block">
+                        <div>Sign-in</div>
+                    </a>
                     {{-- <a href="https://www.tomorrow.university/application/newsletter"
                         class="nav-button w-inline-block">
                         <div>Newsletter Sign-up</div>
