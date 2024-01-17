@@ -7,8 +7,8 @@
         <i class="fas fa-times p-3 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none"
             aria-hidden="true" id="iconSidenav"></i>
         <a class="navbar-brand m-0 d-flex text-wrap align-items-center" href=" {{ route('backoffice.dashboard') }} ">
-            <img src="{{ asset('assets') }}/img/logo-ct.png" class="navbar-brand-img h-100" alt="main_logo">
-            <span class="ms-2 font-weight-bold text-white">Markandeya</span>
+            <img src="{{ asset('assets') }}/img/itp.png" class="navbar-brand-img h-100" alt="main_logo">
+            <span class="ms-2 font-weight-bold text-white">ITP Markandeya</span>
         </a>
     </div>
     <hr class="horizontal light mt-0 mb-2">
