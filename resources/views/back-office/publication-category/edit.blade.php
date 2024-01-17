@@ -1,6 +1,6 @@
 <x-layout bodyClass="g-sidenav-show bg-gray-200">
 
-    <x-navbars.sidebar activePage="backoffice.publication.index"></x-navbars.sidebar>
+    <x-navbars.sidebar activePage="backoffice.publication-category.index"></x-navbars.sidebar>
     <div class="main-content position-relative bg-gray-100 max-height-vh-100 h-100">
         <!-- Navbar -->
         <x-navbars.navs.auth titlePage='Edit Publication Category'></x-navbars.navs.auth>
@@ -50,7 +50,7 @@
                                         <p class='text-danger inputerror'>{{ $message }} </p>
                                     @enderror
                                 </div>
-                                
+
                             </div>
                             <button type="submit" class="btn bg-gradient-dark">Submit</button>
                         </form>
@@ -77,7 +77,7 @@
             })
         }
     </script>
-        
+
     @endpush
 
 </x-layout>
