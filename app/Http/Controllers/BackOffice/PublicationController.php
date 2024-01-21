@@ -16,7 +16,11 @@ class PublicationController extends Controller
      */
     public function index()
     {
-        $publications = LecturerPublication::with('user','publication_category','publication_sub_category')->get();
+        $publications = LecturerPublication::with('user','publication_category','publication_sub_category');
+        if(auth()->user()->role == 'dosen'){
+            $publications->where('user_id',auth()->user()->id);
+        }
+        $publications = $publications->get();
         $users = User::get();
         $categories = PublicationCategory::get();
         $sub_categories = PublicationSubCategory::get();
@@ -39,7 +43,11 @@ class PublicationController extends Controller
             $publication_sub_categories = PublicationSubCategory::where('publication_category_id',$request->category)->get();
             return response()->json($publication_sub_categories);
         }
-        $dosens = User::where('role','dosen')->get();
+        $dosens = User::where('role','dosen');
+        if(auth()->user()->role == 'dosen'){
+            $dosens = $dosens->where('id',auth()->user()->id);
+        }
+        $dosens = $dosens->get();
         $publication_categories = PublicationCategory::get();
         return view('back-office.publication.create',[
             'dosens' => $dosens,
@@ -78,7 +86,11 @@ class PublicationController extends Controller
      */
     public function edit(string $id)
     {
-        $dosens = User::where('role','dosen')->get();
+        $dosens = User::where('role','dosen');
+        if(auth()->user()->role == 'dosen'){
+            $dosens = $dosens->where('id',auth()->user()->id);
+        }
+        $dosens = $dosens->get();
         $publication_categories = PublicationCategory::get();
         $publication = LecturerPublication::where('id',$id)->first();
         $publication_sub_categories = PublicationSubCategory::where('id',$publication->publication_sub_category_id)->get();

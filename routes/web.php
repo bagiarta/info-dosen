@@ -31,6 +31,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 
 Route::get('lecturer-info',[InfoDosenController::class,'index'])->name('info-dosen.index');
+Route::get('lecturer-info/ppdikti/{id}',[InfoDosenController::class,'ppdikti_detail'])->name('info-dosen.ppdikti_detail');
 Route::get('lecturer-info/{encrypt_id}',[InfoDosenController::class,'detail'])->name('info-dosen.detail');
 // Route::get('/', function () {return redirect('sign-in');})->middleware('guest');
 Route::redirect('backoffice','backoffice/dashboard');

@@ -24,6 +24,7 @@ class PublicationCategoryController extends Controller
      */
     public function create()
     {
+        
         return view('back-office.publication-category.create');
     }
 

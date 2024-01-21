@@ -65,6 +65,7 @@
                     <span class="nav-link-text ms-1">Publication Dosen</span>
                 </a>
             </li>
+            @if(auth()->user()->role != 'dosen')
             <li class="nav-item">
                 <a class="nav-link text-white {{ $activePage == 'backoffice.publication-category.index' ? ' active bg-gradient-primary' : '' }} "
                     href="{{ route('backoffice.publication-category.index') }}">
@@ -74,6 +75,8 @@
                     <span class="nav-link-text ms-1">Publication Category</span>
                 </a>
             </li>
+            @endif
+            @if(auth()->user()->role != 'dosen')
             <li class="nav-item">
                 <a class="nav-link text-white {{ $activePage == 'backoffice.publication-sub-category.index' ? ' active bg-gradient-primary' : '' }} "
                     href="{{ route('backoffice.publication-sub-category.index') }}">
@@ -83,6 +86,7 @@
                     <span class="nav-link-text ms-1">Publication Sub Category</span>
                 </a>
             </li>
+            @endif
             {{-- <li class="nav-item">
                 <a class="nav-link text-white {{ $activePage == 'tables' ? ' active bg-gradient-primary' : '' }} "
                     href="{{ route('tables') }}">

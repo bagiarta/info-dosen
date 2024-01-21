@@ -37,17 +37,53 @@
                             </td>
                             <td>
                                 <p class="fw-normal mb-1">{{ $user->lecturer_user->lecturer_status }}</p>
-                                <p class="text-muted mb-0">{{ $user->lecturer_user->is_active}}</p>
+                                <p class="text-muted mb-0">{{ $user->lecturer_user->is_active }}</p>
                             </td>
                             <td>
                                 <p class="fw-normal mb-1">{{ $user->lecturer_user->faculty }}</p>
-                                <p class="text-muted mb-0">{{ $user->lecturer_user->study_program}}</p>
+                                <p class="text-muted mb-0">{{ $user->lecturer_user->study_program }}</p>
                             </td>
                             <td>
                                 <span class="text-secondary rounded-pill d-inline">{{ $user->lecturer_user->topic }}</span>
                             </td>
                             <td>
-                                <a href="{{ route('info-dosen.detail',$user->encrypt_id) }}" class="btn btn-link btn-sm btn-rounded">
+                                <a href="{{ route('info-dosen.detail', $user->encrypt_id) }}"
+                                    class="btn btn-link btn-sm btn-rounded">
+                                    Detail
+                                </a>
+                            </td>
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        </div>
+        <p class="mt-4">PPDIKTI Data</p>
+        <div class="container">
+            <table class="table bg-secondary align-middle mt-5 mb-0 bg-white">
+                <thead class="bg-light">
+                    <tr>
+                        <th>No</th>
+                        <th>Name</th>
+                        <th>NIDN</th>
+                        <th>Prodi</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach ($ppdikti_map as $key => $ppdikti)
+                        <tr>
+                            <td>{{ $key + 1 }}</td>
+                            <td>
+                                <span class="text-secondary rounded-pill d-inline">{{ $ppdikti['data'][0][0] }}</span>
+                            </td>
+                            <td>
+                                <span class="text-secondary rounded-pill d-inline">{{ $ppdikti['data'][1][1] }}</span>
+                            </td>
+                            <td>
+                                <span class="text-secondary rounded-pill d-inline">{{ $ppdikti['data'][3][1] }}</span>
+                            </td>
+                            <td>
+                                <a href="{{ route('info-dosen.ppdikti_detail',$ppdikti['id']) }}" class="btn btn-link btn-sm btn-rounded">
                                     Detail
                                 </a>
                             </td>

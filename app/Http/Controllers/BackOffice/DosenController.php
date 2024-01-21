@@ -20,7 +20,11 @@ class DosenController extends Controller
      */
     public function index()
     {
-        $dosens = LecturerUser::with('user')->get();
+        $dosens = LecturerUser::with('user');
+        if(auth()->user()->role == 'dosen'){
+            $dosens->where('user_id',auth()->user()->id);
+        }
+        $dosens = $dosens->get();
         return view('back-office.dosen.index', [
             'dosens' => $dosens
         ]);

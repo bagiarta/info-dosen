@@ -12,10 +12,12 @@
                             <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3"
                                 style="justify-content: space-between;display: flex;">
                                 <h6 class="text-white text-capitalize ps-3">Dosen table</h6>
+                                @if(auth()->user()->role != 'dosen')
                                 <a class="nav-link bg-success  text-white me-3 "
                                     href="{{ route('backoffice.dosen.create') }}">
                                     <span class="nav-link-text ms-1">Add Dosen</span>
                                 </a>
+                                @endif
                             </div>
                         </div>
                         <div class="card-body px-0 pb-2">
@@ -89,11 +91,13 @@
                                                         data-toggle="tooltip" data-original-title="Edit user">
                                                         Edit
                                                     </a>
+                                                    @if(auth()->user()->role != 'dosen')
                                                     <form method="POST" action="{{ route('backoffice.dosen.destroy',$dosen->user->id) }}">
                                                         {{ csrf_field() }}
                                                         {{ method_field('DELETE') }}
                                                             <button class="text-secondary border-0 font-weight-bold text-xs" style="display: contents" type="submit">Delete</button>
                                                     </form>
+                                                    @endif
                                                     {{-- <a href="#" onclick="deleteDosen('{{ csrf_token() }}','{{ route('backoffice.dosen.destroy',$dosen->user->id) }}','{{ $dosen->user->id }}','{{ route('backoffice.dosen.index') }}')"
                                                         class="text-secondary font-weight-bold text-xs"
                                                         data-toggle="tooltip" data-original-title="Edit user">
