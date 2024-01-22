@@ -4,56 +4,32 @@
     <div class="container-1 w-container">
         <div class="_40-60--wrap">
             <div class="_60-div padding-right">
-                <div data-w-id="8bd54465-ed12-ac67-92ab-2ae4ff56fe47" class="navi-trigger"></div>
+                <div  class="navi-trigger"></div>
                 <h1 class="h3 h-medium">Institut Teknologi dan Pendidikan Markandeya Bali</h1>
                 <p class="p1">Institut Teknologi dan Pendidikan Markandeya Bali (ITP Markandeya Bali) merupakan salah satu kampus favorit calon mahasiswa baru di Bali.
                     Lokasinya berada di Jl. Muhammad Hatta, LC Subak Aya, Bangli, Provinsi Bali, Indonesia.
                     Setiap tahunnya, kampus ini selalu ramai dipadati calon mahasiswa baru. Sebagai
                     informasi umum, Institut Teknologi dan Pendidikan Markandeya Bali (ITP Markandeya Bali) berdiri pada tanggal 08 Februari 2021.
                      <br></p>
-                <div class="button-wrap mob"><a href="#"
-                        data-w-id="417128a2-fa57-5987-120e-c35262525cb9"
-                        style="background-color:rgb(25,32,36);border-color:rgba(0,0,0,0)"
-                        class="main-button v2 w-inline-block"><img
-                            src="./ext_asset/618a49543e2303a5fb854933_Group 274 (1).svg"
+                <div class="button-wrap mob"><a href="https://pmb.markandeyabali.ac.id/"
+
+                        style="background-color:rgb(4, 247, 77);border-color:rgba(4, 250, 62, 0.809)"
+                        class="main-button v2 w-inline-block"><img src="./ext_asset/618a49543e2303a5fb854933_Group 274 (1).svg"
                             loading="lazy" style="filter:invert(0%)" alt="" class="image-30">
-                        <div style="color:rgb(255,255,255)" class="text-block-17">Get brochure</div>
-                    </a><a href="#"
-                        class="link-block w-inline-block">
-                        <div class="text-block-11">Apply now</div><img
-                            src="./ext_asset/618a4f6f193df66574a67474_arrow-black.svg"
-                            loading="lazy" alt="" class="image-41">
+                        <div style="color:rgb(255,255,255)" class="text-block-17">Register Now</div>
                     </a></div>
                 <div class="badges_button">
                     <div class="badges_wrapper">
                         <div class="button-wrap desk"><a
-                                href="#"
-                                data-w-id="db3efff2-816c-c041-33ef-b8dc1c71e655"
-                                style="background-color:rgb(25,32,36);border-color:rgba(0,0,0,0)"
+                                href="https://pmb.markandeyabali.ac.id/"
+
+                                style="background-color:rgb(9, 242, 102);border-color:rgba(6, 239, 37, 0.758)"
                                 class="main-button v2 w-inline-block">
-                                <div style="color:rgb(255,255,255)" class="text-block-17">Get brochure</div>
-                            </a><a href="#"
-                                class="link-block w-inline-block">
-                                <div class="text-block-11">Apply now</div><img
-                                    src="./ext_asset/618a4f6f193df66574a67474_arrow-black.svg"
-                                    loading="lazy" alt="" class="image-41">
+                                <div style="color:rgb(255,255,255)" class="text-block-17">Register Now</div>
                             </a></div>
-                        <div class="badges"><img
-                                src="./ext_asset/logoitp.png"
-                                loading="lazy" alt="" class="badge desk"><img
-                                src="./ext_asset/6530ed03cbb7026482101abf_trustpiolot-min.png"
-                                loading="lazy"
-                                sizes="(max-width: 479px) 100vw, (max-width: 991px) 67.84375px, 7vw"
-                                srcset="https://assets-global.website-files.com/616420dbe602629eea6b0824/6530ed03cbb7026482101abf_trustpiolot-min-p-500.png 500w, https://assets-global.website-files.com/616420dbe602629eea6b0824/6530ed03cbb7026482101abf_trustpiolot-min.png 1080w"
-                                alt="" class="badge desk"></div>
-                        <div class="badges mob"><img
-                                src="./ext_asset/6357c13171727e7da0fd25a1_State Recognized University.svg"
-                                loading="lazy" alt="" class="badge"><img
-                                src="./ext_asset/63579ca7e5d1b117687c7946_TrustPilot.svg"
-                                loading="lazy" alt="" class="badge"></div>
-                    </div><img
-                        src="./ext_asset/63908bfb5b854ca9ee5c881d_Frame (11).svg"
-                        loading="lazy" alt="" class="wu_logo">
+                        <div class="badges"></div>
+                        <div class="badges mob"></div>
+                    </div>
                 </div>
             </div>
             <div class="_40-div padding-none"><img

@@ -114,6 +114,14 @@
                                     @enderror
                                 </div>
                                 <div class="mb-3 col-md-6">
+                                    <label class="form-label">NIDN*</label>
+                                    <input type="text" name="nidn" class=" form-control border border-2 p-2" placeholder="nidn" required
+                                        value='{{ old('nidn') }}'>
+                                    @error('nidn')
+                                        <p class='text-danger inputerror'>{{ $message }} </p>
+                                    @enderror
+                                </div>
+                                <div class="mb-3 col-md-6">
                                     <label class="form-label">Email address*</label>
                                     <input type="email" name="email" class="form-control border border-2 p-2" required
                                     value='{{ old('email') }}'>
@@ -121,8 +129,8 @@
                                     <p class='text-danger inputerror'>{{ $message }} </p>
                                     @enderror
                                 </div>
-                                
-                                
+
+
                                 <div class="mb-3 col-md-6">
                                     <label class="form-label">Password*</label>
                                     <input type="password" name="password" class="form-control border border-2 p-2" required

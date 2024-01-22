@@ -21,8 +21,8 @@ class DosenController extends Controller
     public function index()
     {
         $dosens = LecturerUser::with('user');
-        if(auth()->user()->role == 'dosen'){
-            $dosens->where('user_id',auth()->user()->id);
+        if (auth()->user()->role == 'dosen') {
+            $dosens->where('user_id', auth()->user()->id);
         }
         $dosens = $dosens->get();
         return view('back-office.dosen.index', [
@@ -50,6 +50,7 @@ class DosenController extends Controller
             'email' => 'required|email|unique:users,email',
             'name' => 'required',
             'nip' => 'required|unique:lecturer_users,nip',
+            'nidn' => 'required|unique:lecturer_users,nidn',
             'password' => 'required',
             'status' => 'required',
             'religion' => 'required'
@@ -57,8 +58,9 @@ class DosenController extends Controller
         $id = DB::select("SELECT LAST_INSERT_ID() AS last_insert_id FROM users");
         $crypt_id = Crypt::encrypt($id == NULL ? 1 : $id[0]->last_insert_id + 1);
         $photo = NULL;
+        $random_string = Str::random(100);
         if ($request->file('photo') != NULL) {
-            $photo = $crypt_id . '.' . $request->photo->getClientOriginalExtension();
+            $photo = $random_string . '.' . $request->photo->getClientOriginalExtension();
             $a = $request->photo->storeAs('asset_dosen/profile_pictures/', $photo, ['disk' => 'public_path']);
             // dd($a);
         }
@@ -74,6 +76,7 @@ class DosenController extends Controller
             'user_id' => $user->id,
             'religion_id' => $request->religion,
             'nip' => $request->nip,
+            'nidn' => $request->nidn,
             'status' => $request->status,
             'lecturer_status' => $request->lecturer_status,
             'is_active' => $request->is_active,
@@ -123,7 +126,8 @@ class DosenController extends Controller
         $photo = NULL;
         if ($request->photo != NULL) {
             Storage::disk('public_path')->delete($oldUser->photo);
-            $photo = $oldUser->encrypt_id . '.' . $request->photo->getClientOriginalExtension();
+            $random_string = Str::random(100);
+            $photo = $random_string . '.' . $request->photo->getClientOriginalExtension();
             $a = $request->photo->storeAs('asset_dosen/profile_pictures/', $photo, ['disk' => 'public_path']);
             // dd($a);
         }

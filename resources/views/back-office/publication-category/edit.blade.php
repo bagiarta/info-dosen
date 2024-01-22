@@ -38,21 +38,23 @@
                                 </div>
                             </div>
                         @endif
-                        <form method='POST' action='{{ route('backoffice.publication-category.update',$pub_cat->id) }}' enctype="multipart/form-data">
+                        <form method='POST' action='{{ route('backoffice.publication-category.update', $pub_cat->id) }}'
+                            enctype="multipart/form-data">
                             @csrf
                             @method('PATCH')
                             <div class="row">
                                 <div class="mb-3 col-md-6">
                                     <label class="form-label">Kategori*</label>
-                                    <input type="text" name="name" class=" form-control border border-2 p-2" placeholder="Nama Kategori Publikasi" required
-                                        value='{{ old('name',$pub_cat->name) }}'>
+                                    <input type="text" name="name" class=" form-control border border-2 p-2"
+                                        placeholder="Nama Kategori Publikasi" required
+                                        value='{{ old('name', $pub_cat->name) }}'>
                                     @error('name')
                                         <p class='text-danger inputerror'>{{ $message }} </p>
                                     @enderror
                                 </div>
 
                             </div>
-                            <button type="submit" class="btn bg-gradient-dark">Submit</button>
+                            <button type="submit" class="btn bg-gradient-success">Submit</button>
                         </form>
 
                     </div>
@@ -64,20 +66,19 @@
     </div>
     <x-plugins></x-plugins>
     @push('js')
-    <script>
-        function get_sub_category(that){
-            fetch('{{ route('backoffice.publication.create') }}/?category='+that.value)
-            .then(response => response.json())
-            .then(response => {
-                let text = '<option class="form-control" id="" disabled selected></option>';
-                for(let subCat of response){
-                    text = text+`<option class="form-control" id="" value="${subCat.id}">${subCat.name}</option>`
-                }
-                document.getElementById('subCategory').innerHTML = text
-            })
-        }
-    </script>
-
+        <script>
+            function get_sub_category(that) {
+                fetch('{{ route('backoffice.publication.create') }}/?category=' + that.value)
+                    .then(response => response.json())
+                    .then(response => {
+                        let text = '<option class="form-control" id="" disabled selected></option>';
+                        for (let subCat of response) {
+                            text = text + `<option class="form-control" id="" value="${subCat.id}">${subCat.name}</option>`
+                        }
+                        document.getElementById('subCategory').innerHTML = text
+                    })
+            }
+        </script>
     @endpush
 
 </x-layout>

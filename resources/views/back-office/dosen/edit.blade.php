@@ -86,15 +86,16 @@
                                 </div>
                             </div>
                         @endif
-                        <form method='POST' action='{{ route('backoffice.dosen.update',$dosen->id) }}' enctype="multipart/form-data">
+                        <form method='POST' action='{{ route('backoffice.dosen.update', $dosen->id) }}'
+                            enctype="multipart/form-data">
                             @csrf
                             @method('PATCH')
                             <div class="row">
 
                                 <div class="mb-3 col-md-6">
                                     <label class="form-label">Photo</label>
-                                    <p>old image</p>
-                                    <img class="w-25" src="{{ asset($dosen->photo) }}" alt="">
+                                        <p>old image</p>
+                                        <img class="w-25" src="{{ asset($dosen->photo ? $dosen->photo:'assets/img/profile.png' ) }}" alt="">
                                     <input type="file" name="photo" class="d-block border border-2 p-1">
                                     @error('name')
                                         <p class='text-danger inputerror'>{{ $message }} </p>
@@ -102,102 +103,119 @@
                                 </div>
                                 <div class="mb-3 col-md-6">
                                     <label class="form-label">Name*</label>
-                                    <input type="text" name="name" class=" form-control border border-2 p-2" placeholder="Nama Lengkap dengan Gelar" required
-                                        value='{{ old('name',$dosen->name) }}'>
+                                    <input type="text" name="name" class=" form-control border border-2 p-2"
+                                        placeholder="Nama Lengkap dengan Gelar" required
+                                        value='{{ old('name', $dosen->name) }}'>
                                     @error('name')
                                         <p class='text-danger inputerror'>{{ $message }} </p>
                                     @enderror
                                 </div>
                                 <div class="mb-3 col-md-6">
                                     <label class="form-label">NIP*</label>
-                                    <input type="text" name="nip" class=" form-control border border-2 p-2" placeholder="NIP" required
-                                        value='{{ old('nip',$dosen->lecturer_user->nip) }}'>
+                                    <input type="text" name="nip" class=" form-control border border-2 p-2"
+                                        placeholder="NIP" required value='{{ old('nip', $dosen->lecturer_user->nip) }}'>
                                     @error('nip')
                                         <p class='text-danger inputerror'>{{ $message }} </p>
                                     @enderror
                                 </div>
                                 <div class="mb-3 col-md-6">
+                                    <label class="form-label">NIDN</label>
+                                    <input type="text" class=" form-control border border-2 p-2" placeholder="NIP"
+                                        required disabled value='{{ $dosen->lecturer_user->nidn }}'>
+                                </div>
+                                <div class="mb-3 col-md-6">
                                     <label class="form-label">Email address*</label>
-                                    <input type="email" name="email" class="form-control border border-2 p-2" required
-                                    value='{{ old('email',$dosen->email) }}'>
+                                    <input type="email" name="email" class="form-control border border-2 p-2"
+                                        required value='{{ old('email', $dosen->email) }}'>
                                     @error('email')
-                                    <p class='text-danger inputerror'>{{ $message }} </p>
+                                        <p class='text-danger inputerror'>{{ $message }} </p>
                                     @enderror
                                 </div>
-                                
-                                
+
+
                                 <div class="mb-3 col-md-6">
                                     <label class="form-label">Change Password</label>
                                     <input type="password" name="password" class="form-control border border-2 p-2"
-                                    value='{{ old('password') }}'>
+                                        value='{{ old('password') }}'>
                                     @error('password')
-                                    <p class='text-danger inputerror'>{{ $message }} </p>
+                                        <p class='text-danger inputerror'>{{ $message }} </p>
                                     @enderror
                                 </div>
                                 <div class="mb-3 col-md-6">
                                     <label class="form-label">Agama*</label>
-                                    <select class="form-control form-select border border-2 p-2" name="religion" id="" required>
+                                    <select class="form-control form-select border border-2 p-2" name="religion"
+                                        id="" required>
                                         <option class="form-control" id="" disabled selected></option>
                                         @foreach ($religions as $religion)
-                                        <option class="form-control" {{ $dosen->lecturer_user->religion_id == $religion->id ? 'selected' : '' }} value="{{ $religion->id }}">{{ $religion->name }}</option>
+                                            <option class="form-control"
+                                                {{ $dosen->lecturer_user->religion_id == $religion->id ? 'selected' : '' }}
+                                                value="{{ $religion->id }}">{{ $religion->name }}</option>
                                         @endforeach
                                     </select>
                                     @error('religion')
-                                    <p class='text-danger inputerror'>{{ $message }} </p>
+                                        <p class='text-danger inputerror'>{{ $message }} </p>
                                     @enderror
                                 </div>
                                 <div class="mb-3 col-md-6">
                                     <label class="form-label">status*</label>
-                                    <input type="text" name="status" class=" form-control border border-2 p-2" placeholder="Ex : Tersertivikasi" required
-                                        value='{{ old('status',$dosen->lecturer_user->status) }}'>
+                                    <input type="text" name="status" class=" form-control border border-2 p-2"
+                                        placeholder="Ex : Tersertivikasi" required
+                                        value='{{ old('status', $dosen->lecturer_user->status) }}'>
                                     @error('status')
                                         <p class='text-danger inputerror'>{{ $message }} </p>
                                     @enderror
                                 </div>
                                 <div class="mb-3 col-md-6">
                                     <label class="form-label">Jenis Kontrak Kerja*</label>
-                                    <input type="text" name="lecturer_status" class=" form-control border border-2 p-2" placeholder="Ex : PNS" required
-                                        value='{{ old('lecturer_status',$dosen->lecturer_user->lecturer_status) }}'>
+                                    <input type="text" name="lecturer_status"
+                                        class=" form-control border border-2 p-2" placeholder="Ex : PNS" required
+                                        value='{{ old('lecturer_status', $dosen->lecturer_user->lecturer_status) }}'>
                                     @error('lecturer_status')
                                         <p class='text-danger inputerror'>{{ $message }} </p>
                                     @enderror
                                 </div>
                                 <div class="mb-3 col-md-6">
                                     <label class="form-label">Status Kontrak Kerja*</label>
-                                    <input type="text" name="is_active" class=" form-control border border-2 p-2" placeholder="Ex : Aktif | Pensiun" required
-                                        value='{{ old('is_active',$dosen->lecturer_user->is_active) }}'>
+                                    <input type="text" name="is_active" class=" form-control border border-2 p-2"
+                                        placeholder="Ex : Aktif | Pensiun" required
+                                        value='{{ old('is_active', $dosen->lecturer_user->is_active) }}'>
                                     @error('is_active')
                                         <p class='text-danger inputerror'>{{ $message }} </p>
                                     @enderror
                                 </div>
                                 <div class="mb-3 col-md-6">
                                     <label class="form-label">Fakultas*</label>
-                                    <input type="text" name="faculty" class=" form-control border border-2 p-2" placeholder="Ex : Fakultas Kedokteran | Fakultas Teknik" required
-                                        value='{{ old('faculty',$dosen->lecturer_user->faculty) }}'>
+                                    <input type="text" name="faculty" class=" form-control border border-2 p-2"
+                                        placeholder="Ex : Fakultas Kedokteran | Fakultas Teknik" required
+                                        value='{{ old('faculty', $dosen->lecturer_user->faculty) }}'>
                                     @error('faculty')
                                         <p class='text-danger inputerror'>{{ $message }} </p>
                                     @enderror
                                 </div>
                                 <div class="mb-3 col-md-6">
                                     <label class="form-label">Program Studi*</label>
-                                    <input type="text" name="study_program" class=" form-control border border-2 p-2" placeholder="Ex : Fakultas Kedokteran | Fakultas Teknik" required
-                                        value='{{ old('study_program',$dosen->lecturer_user->study_program) }}'>
+                                    <input type="text" name="study_program"
+                                        class=" form-control border border-2 p-2"
+                                        placeholder="Ex : Fakultas Kedokteran | Fakultas Teknik" required
+                                        value='{{ old('study_program', $dosen->lecturer_user->study_program) }}'>
                                     @error('study_program')
                                         <p class='text-danger inputerror'>{{ $message }} </p>
                                     @enderror
                                 </div>
                                 <div class="mb-3 col-md-6">
                                     <label class="form-label">Borndate*</label>
-                                    <input type="date" name="birthday" class=" form-control border border-2 p-2" placeholder="Ex : Fakultas Kedokteran | Fakultas Teknik" required
-                                        value='{{ old('birthday',$dosen->lecturer_user->birthday) }}'>
+                                    <input type="date" name="birthday" class=" form-control border border-2 p-2"
+                                        placeholder="Ex : Fakultas Kedokteran | Fakultas Teknik" required
+                                        value='{{ old('birthday', $dosen->lecturer_user->birthday) }}'>
                                     @error('birthday')
                                         <p class='text-danger inputerror'>{{ $message }} </p>
                                     @enderror
                                 </div>
                                 <div class="mb-3 col-md-6">
                                     <label class="form-label">Topic*</label>
-                                    <input type="text" name="topic" class=" form-control border border-2 p-2" placeholder="Ex : Ilmu Kesehatan, Ilmu Kedokteran" required
-                                        value='{{ old('topic',$dosen->lecturer_user->topic) }}'>
+                                    <input type="text" name="topic" class=" form-control border border-2 p-2"
+                                        placeholder="Ex : Ilmu Kesehatan, Ilmu Kedokteran" required
+                                        value='{{ old('topic', $dosen->lecturer_user->topic) }}'>
                                     @error('topic')
                                         <p class='text-danger inputerror'>{{ $message }} </p>
                                     @enderror
@@ -207,13 +225,13 @@
                                 <div class="mb-3 col-md-12">
                                     <label for="floatingTextarea2">Deskripsi Singkat Tentang Dosen</label>
                                     <textarea class="form-control border border-2 p-2" placeholder=" Say something about yourself" id="floatingTextarea2"
-                                        name="description" rows="4" cols="50">{{ old('description',$dosen->lecturer_user->description) }}</textarea>
+                                        name="description" rows="4" cols="50">{{ old('description', $dosen->lecturer_user->description) }}</textarea>
                                     @error('description')
                                         <p class='text-danger inputerror'>{{ $message }} </p>
                                     @enderror
                                 </div>
                             </div>
-                            <button type="submit" class="btn bg-gradient-dark">Submit</button>
+                            <button type="submit" class="btn bg-gradient-success">Submit</button>
                         </form>
 
                     </div>

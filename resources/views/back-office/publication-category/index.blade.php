@@ -9,12 +9,12 @@
                 <div class="col-12">
                     <div class="card my-4">
                         <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
-                            <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3"
+                            <div class="bg-gradient-success shadow-success border-radius-lg pt-4 pb-3"
                                 style="justify-content: space-between;display: flex;">
                                 <h6 class="text-white text-capitalize ps-3">Publication Category table</h6>
-                                <a class="nav-link bg-success  text-white me-3 "
+                                <a class="nav-link bg-info  text-white me-3 "
                                     href="{{ route('backoffice.publication-category.create') }}">
-                                    <span class="nav-link-text ms-1">Add Publication Category</span>
+                                    <span class="nav-link-text ms-1"> + Add Publication Category</span>
                                 </a>
                             </div>
                         </div>

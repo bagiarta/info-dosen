@@ -24,7 +24,7 @@
                         <tr>
                             <td>
                                 <div class="d-flex align-items-center">
-                                    <img src="{{ asset($user->photo) }}" alt="" style="width: 45px; height: 45px"
+                                    <img src="{{ asset($user->photo != null ? $user->photo : 'assets/img/profile.png' ) }}" alt="" style="width: 45px; height: 45px"
                                         class="rounded-circle" />
                                     <div class="ms-3">
                                         <p class="fw-bold mb-1">{{ $user->name }}</p>
@@ -57,7 +57,7 @@
                 </tbody>
             </table>
         </div>
-        <p class="mt-4">PPDIKTI Data</p>
+        {{-- <p class="mt-4">PPDIKTI Data</p>
         <div class="container">
             <table class="table bg-secondary align-middle mt-5 mb-0 bg-white">
                 <thead class="bg-light">
@@ -91,7 +91,7 @@
                     @endforeach
                 </tbody>
             </table>
-        </div>
+        </div> --}}
     </div>
 @endsection
 @section('script')

@@ -57,10 +57,10 @@
         }(window, document);
     </script>
     <link
-        href="https://assets-global.website-files.com/616420dbe602629eea6b0824/616420dbe60262d5106b0859_favicon-32x32.png"
+        href="{{ asset('assets/img/logos/itp.png') }}"
         rel="shortcut icon" type="image/x-icon">
     <link
-        href="https://assets-global.website-files.com/616420dbe602629eea6b0824/616420dbe6026228976b085a_ToU%20Webclip.png"
+        href="{{ asset('assets/img/logos/itp.png') }}"
         rel="apple-touch-icon">
     <script async="" src="./ext_asset/js(2)"></script>
     <script type="text/javascript">
@@ -3611,7 +3611,7 @@
                     class="menu_dots">
                 <div>menu</div>
             </a><a href="#" class="logo_link w-inline-block"><img
-                    src="./ext_asset/644e8f8f6234ded7ae16c9d2_Vectordds.svg" loading="lazy" alt=""
+                    src="{{ asset('assets/img/logos/itp.png') }}" loading="lazy" alt=""
                     class="nav_img"></a></div>
         <div class="menu_overlay">
             <div class="menu_contain">
@@ -3634,50 +3634,17 @@
                         href="#" class="mba_back_btn w-inline-block"><img
                             src="./ext_asset/644e96c4a95f11e9e9a42003_Group 5732sd.svg" loading="lazy"
                             alt="" class="arrow_icon"></a></div>
-                <div class="menu_wrapper"><a data-w-id="20517f5d-0876-eeda-974d-6f30ac525bde"
-                        href="#" class="nm_link w-inline-block">
-                        <div>Master</div><img src="./ext_asset/644e930e9c87265a418e8230_Arrow - Right 2 1.svg"
-                            loading="lazy" alt="" class="nm_arrow">
-                    </a><a data-w-id="20517f5d-0876-eeda-974d-6f30ac525be2"
-                        href="#" class="nm_link w-inline-block">
-                        <div>Bachelor</div><img src="./ext_asset/644e930e9c87265a418e8230_Arrow - Right 2 1.svg"
-                            loading="lazy" alt="" class="nm_arrow">
-                    </a><a data-w-id="20517f5d-0876-eeda-974d-6f30ac525be6"
-                        href="#" class="nm_link w-inline-block">
-                        <div>Certificate Programs</div><img
-                            src="./ext_asset/644e930e9c87265a418e8230_Arrow - Right 2 1.svg" loading="lazy"
-                            alt="" class="nm_arrow">
-                    </a><a data-w-id="b7200bd1-d0ba-3487-d60d-5acc460b5eef"
-                        href="#" class="nm_link hdn w-inline-block">
-                        <div>MBA</div><img src="./ext_asset/644e930e9c87265a418e8230_Arrow - Right 2 1.svg"
-                            loading="lazy" alt="" class="nm_arrow">
-                    </a><a href="#"
-                        class="cta desk v2 nav w-inline-block">
-                        <div>Get brochure</div>
-                    </a>
-                    <div class="nm_small_wrapper"><a href="#"
+                <div class="menu_wrapper">
+                    <div class="nm_small_wrapper">
+                        <a href="{{ route('info-dosen.index') }}"
                             class="nm_small_link w-inline-block">
-                            <div>About ToU</div>
-                        </a><a href="#"
+                            <div>Lecturer Info</div>
+                        </a><a href="{{ route('login') }}"
                             class="nm_small_link w-inline-block">
-                            <div>Chat with a Learner</div>
-                        </a><a href="#" class="nm_small_link w-inline-block">
-                            <div>Learning Experience</div>
-                        </a><a href="#"
-                            class="nm_small_link w-inline-block">
-                            <div>Community</div>
-                        </a><a href="#" class="nm_small_link w-inline-block">
-                            <div>Blog</div>
-                        </a><a href="#" class="nm_small_link w-inline-block">
-                            <div>Events</div>
-                        </a><a href="#"
-                            class="nm_small_link w-inline-block">
-                            <div>University Governance</div>
-                        </a><a href="#"
-                            class="nm_small_link w-inline-block">
-                            <div>For Business</div>
-                        </a></div>
-                    <div class="socials_wrapper"><a
+                            <div>Sign-In</div>
+                        </a>
+                        </div>
+                    {{-- <div class="socials_wrapper"><a
                             href="#https://www.linkedin.com/school/tomorrowuniversity/"
                             class="nm_social_link w-inline-block"><img
                                 src="./ext_asset/644e94eed74e61bff81158f5_Group 5732.svg" loading="lazy"
@@ -3697,7 +3664,7 @@
                             href="#https://www.youtube.com/channel/UC0JojcoZac-iHHU5Yx8K1Cw"
                             class="nm_social_link w-inline-block"><img
                                 src="./ext_asset/644e94eee4f01827b8818f2d_Group 5736.svg" loading="lazy"
-                                alt="" class="socials_icon"></a></div>
+                                alt="" class="socials_icon"></a></div> --}}
                 </div>
                 <div class="cert_overlay">
                     <div class="overlay_contain"><a
@@ -4216,7 +4183,7 @@
                 </div>
             </div>
         </div>
-    {{-- <div class="mobile_menu">
+    <div class="mobile_menu">
         <div class="starting_menu_screen"><a data-w-id="084123cd-a75c-03a6-e163-401ddabae4cc"
                 href="#" class="mm_s1_link w-inline-block">
                 <div>Bachelor</div><img src="./ext_asset/62039bba9cd2dbd648e447a9_Group 1164.svg" loading="lazy"
@@ -4366,7 +4333,7 @@
                     </a></div>
             </div>
         </div>
-    </div> --}}
+    </div>
     <script src="./ext_asset/jquery-3.5.1.min.dc5e7f18c8.js.download" type="text/javascript"
         integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="./ext_asset/tomorrow-university.1e7aa6ab3.js.download" type="text/javascript"></script><!-- Google Tag Manager (noscript) -->

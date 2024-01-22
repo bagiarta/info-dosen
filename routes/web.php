@@ -22,6 +22,7 @@ Route::get('/', function () {
 })->name('home');
 
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\GetDataPPDIKTIController;
 use App\Http\Controllers\InfoDosenController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RegisterController;
@@ -35,6 +36,7 @@ Route::get('lecturer-info/ppdikti/{id}',[InfoDosenController::class,'ppdikti_det
 Route::get('lecturer-info/{encrypt_id}',[InfoDosenController::class,'detail'])->name('info-dosen.detail');
 // Route::get('/', function () {return redirect('sign-in');})->middleware('guest');
 Route::redirect('backoffice','backoffice/dashboard');
+Route::get('get-data-ppdikti',[GetDataPPDIKTIController::class,'index']);
 Route::middleware('auth')->prefix('backoffice')->name('backoffice.')->group(function(){
 	Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 	Route::resource('/dosen', DosenController::class);

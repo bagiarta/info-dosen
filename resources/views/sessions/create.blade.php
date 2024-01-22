@@ -17,9 +17,9 @@
                     <div class="row signin-margin">
                         <div class="col-lg-4 col-md-8 col-12 mx-auto">
                             <div class="card z-index-0 fadeIn3 fadeInBottom">
-                                <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
-                                    <div class="bg-gradient-primary shadow-primary border-radius-lg py-3 pe-1">
-                                        <h4 class="text-white font-weight-bolder text-center mt-2 mb-0">Sign in</h4>
+
+
+                                        <h4 class="mt-5 text-white font-weight-bolder text-center mt-2 mb-0"><img src="{{ asset('assets/img/logos/itp.png') }}" alt=""></h4>
                                         {{-- <div class="row mt-3">
                                             <h6 class='text-white text-center'>
                                                 <span class="font-weight-normal">Email:</span> admin@material.com
@@ -41,8 +41,8 @@
                                                 </a>
                                             </div>
                                         </div> --}}
-                                    </div>
-                                </div>
+
+
                                 <div class="card-body">
                                     <form role="form" method="POST" action="{{ route('login') }}" class="text-start">
                                         @csrf
@@ -56,8 +56,8 @@
                                         </div>
                                         @endif
                                         <div class="input-group input-group-outline mt-3">
-                                            <label class="form-label">Email</label>
-                                            <input type="email" class="form-control" name="email" value="">
+                                            <label class="form-label">Email / NIDN</label>
+                                            <input type="text" class="form-control" name="email" value="">
                                             {{-- <input type="email" class="form-control" name="email" value="{{ 'superuser@markandeyabali.ac.id' }}"> --}}
                                         </div>
                                         @error('email')
@@ -77,7 +77,7 @@
                                                 me</label>
                                         </div>
                                         <div class="text-center">
-                                            <button type="submit" class="btn bg-gradient-primary w-100 my-4 mb-2">Sign
+                                            <button type="submit" class="btn w-100 my-4 mb-2 text-white" style="background-color: #23c346">Sign
                                                 in</button>
                                         </div>
                                         {{-- <p class="mt-4 text-sm text-center">

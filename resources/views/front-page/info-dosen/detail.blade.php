@@ -12,12 +12,14 @@
         <main class="container">
             <div class="p-4 p-md-5 mb-4 text-white w-100 rounded bg-dark">
                 <div class="col-md-6 col-lg-12 px-0">
-                    <img src="{{ asset($user->photo) }}" alt="">
+                    <img src="{{ asset($user->photo ? $user->photo:'assets/img/profile.png') }}" alt="">
                     <h1 class="display-4 fst-italic">{{ $user->name }}</h1>
-                    <p class="lead my-3">{{ $user->lecturer_user->nip }}</p>
+                    <p class="lead my-3">{{ $user->lecturer_user->nip }} - {{ $user->lecturer_user->nidn }}</p>
                     <p class="lead my-3">{{ $user->lecturer_user->faculty }} - {{ $user->lecturer_user->study_program }}
                     </p>
                     <p class="lead my-3">{{ $user->lecturer_user->lecturer_status }} - {{ $user->lecturer_user->is_active }}
+                    </p>
+                    <p class="lead my-3">{{ $user->lecturer_user->jenis_kelamin == 'L' ? 'Laki Laki' : ($user->lecturer_user->jenis_kelamin == 'P' ? 'Perempuan' : '') }}
                     </p>
                     <p class="lead my-3 rounded-pill bg-success p-3" style="width: max-content">
                         {{ $user->lecturer_user->status }} </p>
@@ -90,11 +92,11 @@
                         </div>
                         <div class="col-6">
                             <h2 class="blog-post-title">Agama</h2>
-                            <p class="blog-post-meta">{{ $user->lecturer_user->religion->name }}</p>
+                            <p class="blog-post-meta">{{ $user->lecturer_user->religion ? $user->lecturer_user->religion->name : '' }}</p>
                         </div>
                         <div class="col-6">
                             <h2 class="blog-post-title">Tanggal Lahir</h2>
-                            <p class="blog-post-meta">{{ date('d-M-Y', strtotime($user->lecturer_user->birthday)) }}</p>
+                            <p class="blog-post-meta">{{ $user->lecturer_user->birthday ? date('d-M-Y', strtotime($user->lecturer_user->birthday)) : '' }}</p>
                         </div>
                     </article>
                     <hr>

@@ -64,7 +64,7 @@
                                 </div>
 
                             </div>
-                            <button type="submit" class="btn bg-gradient-dark">Submit</button>
+                            <button type="submit" class="btn bg-gradient-success">Submit</button>
                         </form>
 
                     </div>

@@ -9,13 +9,13 @@
                 <div class="col-12">
                     <div class="card my-4">
                         <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
-                            <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3"
+                            <div class="bg-gradient-success shadow-success border-radius-lg pt-4 pb-3"
                                 style="justify-content: space-between;display: flex;">
                                 <h6 class="text-white text-capitalize ps-3">Dosen table</h6>
                                 @if(auth()->user()->role != 'dosen')
-                                <a class="nav-link bg-success  text-white me-3 "
+                                <a class="nav-link bg-info  text-white me-3 "
                                     href="{{ route('backoffice.dosen.create') }}">
-                                    <span class="nav-link-text ms-1">Add Dosen</span>
+                                    <span class="nav-link-text ms-1"> + Add Dosen</span>
                                 </a>
                                 @endif
                             </div>
@@ -52,7 +52,7 @@
                                                 <td>
                                                     <div class="d-flex px-2 py-1">
                                                         <div>
-                                                            <img src="{{ asset($dosen->user->photo) }}"
+                                                            <img src="{{ asset($dosen->user->photo != null ? $dosen->user->photo:'assets/img/profile.png') }}"
                                                                 class="avatar avatar-sm me-3 border-radius-lg"
                                                                 alt="user1">
                                                         </div>
