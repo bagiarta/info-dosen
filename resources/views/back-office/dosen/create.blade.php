@@ -107,7 +107,7 @@
                                 </div>
                                 <div class="mb-3 col-md-6">
                                     <label class="form-label">NIP*</label>
-                                    <input type="text" name="nip" class=" form-control border border-2 p-2" placeholder="NIP" required
+                                    <input type="text" name="nip" class=" form-control border border-2 p-2" placeholder="NIP"
                                         value='{{ old('nip') }}'>
                                     @error('nip')
                                         <p class='text-danger inputerror'>{{ $message }} </p>
