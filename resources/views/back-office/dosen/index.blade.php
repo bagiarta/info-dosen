@@ -12,11 +12,24 @@
                             <div class="bg-gradient-success shadow-success border-radius-lg pt-4 pb-3"
                                 style="justify-content: space-between;display: flex;">
                                 <h6 class="text-white text-capitalize ps-3">Dosen table</h6>
-                                @if(auth()->user()->role != 'dosen')
-                                <a class="nav-link bg-info  text-white me-3 "
-                                    href="{{ route('backoffice.dosen.create') }}">
-                                    <span class="nav-link-text ms-1"> + Add Dosen</span>
-                                </a>
+                                <form action="{{ route('backoffice.dosen.index') }}" method="GET">
+
+                                    <div class="input-group ">
+                                        <div class="form-outline " data-mdb-input-init>
+                                            <input type="search" id="form1" name="search" placeholder="Search"
+                                                value="{{ request()->search }}" class="form-control bg-white" />
+                                            <label class="form-label" for="form1"></label>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary" data-mdb-ripple-init>
+                                            <i class="fas fa-search"></i>
+                                        </button>
+                                    </div>
+                                </form>
+                                @if (auth()->user()->role != 'dosen')
+                                    <a class="nav-link bg-info  text-white me-3 "
+                                        href="{{ route('backoffice.dosen.create') }}">
+                                        <span class="nav-link-text ms-1"> + Add Dosen</span>
+                                    </a>
                                 @endif
                             </div>
                         </div>
@@ -52,7 +65,7 @@
                                                 <td>
                                                     <div class="d-flex px-2 py-1">
                                                         <div>
-                                                            <img src="{{ asset($dosen->user->photo != null ? $dosen->user->photo:'assets/img/profile.png') }}"
+                                                            <img src="{{ asset($dosen->user->photo != null ? $dosen->user->photo : 'assets/img/profile.png') }}"
                                                                 class="avatar avatar-sm me-3 border-radius-lg"
                                                                 alt="user1">
                                                         </div>
@@ -91,12 +104,15 @@
                                                         data-toggle="tooltip" data-original-title="Edit user">
                                                         Edit
                                                     </a>
-                                                    @if(auth()->user()->role != 'dosen')
-                                                    <form method="POST" action="{{ route('backoffice.dosen.destroy',$dosen->user->id) }}">
-                                                        {{ csrf_field() }}
-                                                        {{ method_field('DELETE') }}
-                                                            <button class="text-secondary border-0 font-weight-bold text-xs" style="display: contents" type="submit">Delete</button>
-                                                    </form>
+                                                    @if (auth()->user()->role != 'dosen')
+                                                        <form method="POST"
+                                                            action="{{ route('backoffice.dosen.destroy', $dosen->user->id) }}">
+                                                            {{ csrf_field() }}
+                                                            {{ method_field('DELETE') }}
+                                                            <button
+                                                                class="text-secondary border-0 font-weight-bold text-xs"
+                                                                style="display: contents" type="submit">Delete</button>
+                                                        </form>
                                                     @endif
                                                     {{-- <a href="#" onclick="deleteDosen('{{ csrf_token() }}','{{ route('backoffice.dosen.destroy',$dosen->user->id) }}','{{ $dosen->user->id }}','{{ route('backoffice.dosen.index') }}')"
                                                         class="text-secondary font-weight-bold text-xs"
@@ -119,23 +135,23 @@
     </div>
     @push('js')
         <script>
-            function deleteDosen(csrf_token,route_destroy,id_dosen,route_index) {
-                console.log(csrf_token,route_destroy,id_dosen,route_index)
+            function deleteDosen(csrf_token, route_destroy, id_dosen, route_index) {
+                console.log(csrf_token, route_destroy, id_dosen, route_index)
                 fetch(`${route_destroy}`, {
                         method: "DELETE",
                         headers: {
                             // 'X-CSRF-TOKEN': csrf_token
                         },
                         body: JSON.stringify({
-                            '_method' : 'DELETE',
-                            '_token' : csrf_token
+                            '_method': 'DELETE',
+                            '_token': csrf_token
                         })
                     })
                     .then(async response => console.log(response))
                     .catch(e => console.log(e))
-                    // .then(result => {
-                    //     window.location.href = route_index
-                    // });
+                // .then(result => {
+                //     window.location.href = route_index
+                // });
             }
         </script>
         <script src="{{ asset('assets') }}/js/plugins/chartjs.min.js"></script>

@@ -18,11 +18,14 @@ class DosenController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $dosens = LecturerUser::with('user');
+        $dosens = LecturerUser::join('users','lecturer_users.user_id','=','users.id')->with('user');
         if (auth()->user()->role == 'dosen') {
             $dosens->where('user_id', auth()->user()->id);
+        }
+        if($request->search){
+            $dosens = $dosens->where('nip',$request->search)->orWhere('nidn',$request->search)->orWhere('users.name','LIKE','%'.$request->search.'%');
         }
         $dosens = $dosens->get();
         return view('back-office.dosen.index', [
@@ -163,8 +166,9 @@ class DosenController extends Controller
     public function destroy(string $id)
     {
         $oldUser = User::where('id', $id)->with('lecturer_user')->first();
-
-        $a = Storage::disk('public_path')->delete($oldUser->photo);
+        if($oldUser->photo){
+            $a = Storage::disk('public_path')->delete($oldUser->photo);
+        }
         User::where('id', $id)->with('lecturer_user')->delete();
         // User::where
         return redirect()->route('backoffice.dosen.index');

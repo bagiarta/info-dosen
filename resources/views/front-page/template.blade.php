@@ -56,12 +56,8 @@
                 .className += t + "touch")
         }(window, document);
     </script>
-    <link
-        href="{{ asset('assets/img/logos/itp.png') }}"
-        rel="shortcut icon" type="image/x-icon">
-    <link
-        href="{{ asset('assets/img/logos/itp.png') }}"
-        rel="apple-touch-icon">
+    <link href="{{ asset('assets/img/logos/itp.png') }}" rel="shortcut icon" type="image/x-icon">
+    <link href="{{ asset('assets/img/logos/itp.png') }}" rel="apple-touch-icon">
     <script async="" src="./ext_asset/js(2)"></script>
     <script type="text/javascript">
         window.dataLayer = window.dataLayer || [];
@@ -3586,10 +3582,9 @@
             <div class="container-1 nav_relative w-container">
                 {{-- logo home --}}
                 <div class="navbar-wrap-1"><a href="{{ route('home') }}" class="big-nav-logo w-nav-brand">
-                    {{-- <p>M</p> --}}
-                    <img
-                            src="{{ asset('assets/img/logos/itp.png') }}" style="height: 60px" loading="lazy" alt=""
-                            class=""></a>
+                        {{-- <p>M</p> --}}
+                        <img src="{{ asset('assets/img/logos/itp.png') }}" style="height: 60px" loading="lazy"
+                            alt="" class=""></a>
 
                     <a href="{{ route('info-dosen.index') }}" class="nav-button w-inline-block">
                         <div>Lecturer Info</div>
@@ -3605,45 +3600,38 @@
             </div>
             <div class="bg_div"></div>
         </div>
-        <div class="nav_mobile"><a data-w-id="20517f5d-0876-eeda-974d-6f30ac525bcc"
-                href="#" class="nav_btn w-inline-block"><img
-                    src="./ext_asset/644e8df20aef4361642e3d31_Category 1.svg" loading="lazy" alt=""
-                    class="menu_dots">
+        <div class="nav_mobile"><a data-w-id="20517f5d-0876-eeda-974d-6f30ac525bcc" href="#"
+                class="nav_btn w-inline-block"><img src="./ext_asset/644e8df20aef4361642e3d31_Category 1.svg"
+                    loading="lazy" alt="" class="menu_dots">
                 <div>menu</div>
-            </a><a href="#" class="logo_link w-inline-block"><img
-                    src="{{ asset('assets/img/logos/itp.png') }}" loading="lazy" alt=""
-                    class="nav_img"></a></div>
+            </a><a href="#" class="logo_link w-inline-block"><img src="{{ asset('assets/img/logos/itp.png') }}"
+                    loading="lazy" alt="" class="nav_img"></a></div>
         <div class="menu_overlay">
             <div class="menu_contain">
-                <div class="nav_buttons_wrapper"><a data-w-id="20517f5d-0876-eeda-974d-6f30ac525bd5"
-                        href="#" class="x_btn w-inline-block"><img
-                            src="./ext_asset/644e9659965875e6ee3c84ec_Group 5732S.svg" loading="lazy"
-                            alt="" class="x_icon"></a><a data-w-id="20517f5d-0876-eeda-974d-6f30ac525bd7"
-                        href="#" class="pm_back_btn w-inline-block"><img
-                            src="./ext_asset/644e96c4a95f11e9e9a42003_Group 5732sd.svg" loading="lazy"
-                            alt="" class="arrow_icon"></a><a
-                        data-w-id="20517f5d-0876-eeda-974d-6f30ac525bd9"
-                        href="#" class="ba_back_btn w-inline-block"><img
-                            src="./ext_asset/644e96c4a95f11e9e9a42003_Group 5732sd.svg" loading="lazy"
-                            alt="" class="arrow_icon"></a><a
-                        data-w-id="20517f5d-0876-eeda-974d-6f30ac525bdb"
-                        href="#" class="cert_back_btn w-inline-block"><img
-                            src="./ext_asset/644e96c4a95f11e9e9a42003_Group 5732sd.svg" loading="lazy"
-                            alt="" class="arrow_icon"></a><a
-                        data-w-id="56711d11-1b00-4408-f3df-b730ac57a29d"
-                        href="#" class="mba_back_btn w-inline-block"><img
-                            src="./ext_asset/644e96c4a95f11e9e9a42003_Group 5732sd.svg" loading="lazy"
-                            alt="" class="arrow_icon"></a></div>
+                <div class="nav_buttons_wrapper"><a data-w-id="20517f5d-0876-eeda-974d-6f30ac525bd5" href="#"
+                        class="x_btn w-inline-block"><img src="./ext_asset/644e9659965875e6ee3c84ec_Group 5732S.svg"
+                            loading="lazy" alt="" class="x_icon"></a><a
+                        data-w-id="20517f5d-0876-eeda-974d-6f30ac525bd7" href="#"
+                        class="pm_back_btn w-inline-block"><img
+                            src="./ext_asset/644e96c4a95f11e9e9a42003_Group 5732sd.svg" loading="lazy" alt=""
+                            class="arrow_icon"></a><a data-w-id="20517f5d-0876-eeda-974d-6f30ac525bd9" href="#"
+                        class="ba_back_btn w-inline-block"><img
+                            src="./ext_asset/644e96c4a95f11e9e9a42003_Group 5732sd.svg" loading="lazy" alt=""
+                            class="arrow_icon"></a><a data-w-id="20517f5d-0876-eeda-974d-6f30ac525bdb" href="#"
+                        class="cert_back_btn w-inline-block"><img
+                            src="./ext_asset/644e96c4a95f11e9e9a42003_Group 5732sd.svg" loading="lazy" alt=""
+                            class="arrow_icon"></a><a data-w-id="56711d11-1b00-4408-f3df-b730ac57a29d" href="#"
+                        class="mba_back_btn w-inline-block"><img
+                            src="./ext_asset/644e96c4a95f11e9e9a42003_Group 5732sd.svg" loading="lazy" alt=""
+                            class="arrow_icon"></a></div>
                 <div class="menu_wrapper">
                     <div class="nm_small_wrapper">
-                        <a href="{{ route('info-dosen.index') }}"
-                            class="nm_small_link w-inline-block">
+                        <a href="{{ route('info-dosen.index') }}" class="nm_small_link w-inline-block ">
                             <div>Lecturer Info</div>
-                        </a><a href="{{ route('login') }}"
-                            class="nm_small_link w-inline-block">
+                        </a><a href="{{ route('login') }}" class="nm_small_link w-inline-block">
                             <div>Sign-In</div>
                         </a>
-                        </div>
+                    </div>
                     {{-- <div class="socials_wrapper"><a
                             href="#https://www.linkedin.com/school/tomorrowuniversity/"
                             class="nm_social_link w-inline-block"><img
@@ -3764,8 +3752,8 @@
                                             src="./ext_asset/64773b0f355e9128b76ed716_Right 1.svg" loading="lazy"
                                             alt="" class="image-223">
                                         <div class="tb_16 black medium _130">Discover New Markets and Innovations
-                                        </div><img src="./ext_asset/6436a83aa0c0baea2882078c_Arrow.png"
-                                            loading="lazy" alt="" class="image-215">
+                                        </div><img src="./ext_asset/6436a83aa0c0baea2882078c_Arrow.png" loading="lazy"
+                                            alt="" class="image-215">
                                     </a></div>
                                 <div role="listitem" class="w-dyn-item"><a
                                         href="https://www.tomorrow.university/jtbd-msc/use-technology-and-ai-to-lead-businesses-sustainably"
@@ -3827,8 +3815,8 @@
                                             src="./ext_asset/64773b0f355e9128b76ed716_Right 1.svg" loading="lazy"
                                             alt="" class="image-223">
                                         <div class="tb_16 black medium _130">Discover New Markets and Innovations
-                                        </div><img src="./ext_asset/6436a83aa0c0baea2882078c_Arrow.png"
-                                            loading="lazy" alt="" class="image-215">
+                                        </div><img src="./ext_asset/6436a83aa0c0baea2882078c_Arrow.png" loading="lazy"
+                                            alt="" class="image-215">
                                     </a></div>
                                 <div role="listitem" class="w-dyn-item"><a
                                         href="https://www.tomorrow.university/jtbd-msc/use-technology-and-ai-to-lead-businesses-sustainably"
@@ -3863,14 +3851,14 @@
                                             src="./ext_asset/64773b0f355e9128b76ed716_Right 1.svg" loading="lazy"
                                             alt="" class="image-223">
                                         <div class="tb_16 black medium _130">Become a Responsible Business Leader
-                                        </div><img src="./ext_asset/6436a83aa0c0baea2882078c_Arrow.png"
-                                            loading="lazy" alt="" class="image-215">
+                                        </div><img src="./ext_asset/6436a83aa0c0baea2882078c_Arrow.png" loading="lazy"
+                                            alt="" class="image-215">
                                     </a></div>
                             </div>
                         </div><a href="https://www.tomorrow.university/financing-masters"
                             class="overlay_link_s">Finance Options</a><a
-                            href="https://www.tomorrow.university/masters-admissions"
-                            class="overlay_link_s">Admission Process</a>
+                            href="https://www.tomorrow.university/masters-admissions" class="overlay_link_s">Admission
+                            Process</a>
                     </div>
                     <div class="overlay_contain"><a href="https://www.tomorrow.university/impact-mba"
                             class="overlay_link_b w-inline-block">
@@ -3912,9 +3900,8 @@
                                             src="./ext_asset/64773b0f355e9128b76ed716_Right 1.svg" loading="lazy"
                                             alt="" class="image-223">
                                         <div class="tb_16 black medium _130">Measure and Steer the Impact of Your
-                                            Organization</div><img
-                                            src="./ext_asset/6436a83aa0c0baea2882078c_Arrow.png" loading="lazy"
-                                            alt="" class="image-215">
+                                            Organization</div><img src="./ext_asset/6436a83aa0c0baea2882078c_Arrow.png"
+                                            loading="lazy" alt="" class="image-215">
                                     </a></div>
                                 <div role="listitem" class="w-dyn-item"><a
                                         href="https://www.tomorrow.university/jtbd-mba/manage-and-grow-a-sustainable-business"
@@ -3922,8 +3909,8 @@
                                             src="./ext_asset/64773b0f355e9128b76ed716_Right 1.svg" loading="lazy"
                                             alt="" class="image-223">
                                         <div class="tb_16 black medium _130">Manage and Grow a Sustainable Business
-                                        </div><img src="./ext_asset/6436a83aa0c0baea2882078c_Arrow.png"
-                                            loading="lazy" alt="" class="image-215">
+                                        </div><img src="./ext_asset/6436a83aa0c0baea2882078c_Arrow.png" loading="lazy"
+                                            alt="" class="image-215">
                                     </a></div>
                                 <div role="listitem" class="w-dyn-item"><a
                                         href="https://www.tomorrow.university/jtbd-mba/use-technology-and-ai-to-transform-your-organization"
@@ -3965,16 +3952,15 @@
                             </div>
                         </div><a href="https://www.tomorrow.university/financing-masters"
                             class="overlay_link_s">Finance Options</a><a
-                            href="https://www.tomorrow.university/masters-admissions"
-                            class="overlay_link_s">Admission Process</a>
+                            href="https://www.tomorrow.university/masters-admissions" class="overlay_link_s">Admission
+                            Process</a>
                     </div>
                     <div class="overlay_contain"><a href="https://www.tomorrow.university/master-of-science-ce"
                             class="overlay_link_b w-inline-block">
                             <div class="tb_title">MBA</div>
                             <div class="tb_28">Online Impact MBA: Vision Pro Edition (US only)</div>
-                        </a><a href="https://www.tomorrow.university/financing-masters"
-                            class="overlay_link_s">Finance Options</a><a
-                            href="https://www.tomorrow.university/masters-admissions"
+                        </a><a href="https://www.tomorrow.university/financing-masters" class="overlay_link_s">Finance
+                            Options</a><a href="https://www.tomorrow.university/masters-admissions"
                             class="overlay_link_s">Admission Process</a></div>
                     <div class="overlay_contain"><a
                             href="https://www.tomorrow.university/open-programs/impact-certificates"
@@ -4003,9 +3989,9 @@
 
     {{-- Footer --}}
 
-        <div class="quicklinks">
-            <div class="container-1 w-container">
-                {{-- <div class="footer-wrap">
+    <div class="quicklinks">
+        <div class="container-1 w-container">
+            {{-- <div class="footer-wrap">
                     <div class="footer_left _3"><a href="#"
                             class="footer-logo-link w-inline-block"><img
                                 src="./ext_asset/63173256f06a910edb8abc5b_Group 1584.svg" loading="eager"
@@ -4170,22 +4156,22 @@
                         </div>
                     </div>
                 </div> --}}
-                <div class="div-block-45" sty>
-                    <div class="text_b_16 _2">Copyright © 2024 Markandeya. All rights
-                        reserved.</div>
-                    <div class="div-block-46"><a href="https://www.tomorrow.university/legal/imprint"
-                            class="footer-link _2 w-inline-block">
-                            <div class="text_b_16"></div>
-                        </a><a href="https://www.tomorrow.university/legal/privacy-policy"
-                            class="footer-link _2 w-inline-block">
-                            <div class="text_b_16"></div>
-                        </a></div>
-                </div>
+            <div class="div-block-45" sty>
+                <div class="text_b_16 _2">Copyright © 2024 Markandeya. All rights
+                    reserved.</div>
+                <div class="div-block-46"><a href="https://www.tomorrow.university/legal/imprint"
+                        class="footer-link _2 w-inline-block">
+                        <div class="text_b_16"></div>
+                    </a><a href="https://www.tomorrow.university/legal/privacy-policy"
+                        class="footer-link _2 w-inline-block">
+                        <div class="text_b_16"></div>
+                    </a></div>
             </div>
         </div>
+    </div>
     <div class="mobile_menu">
-        <div class="starting_menu_screen"><a data-w-id="084123cd-a75c-03a6-e163-401ddabae4cc"
-                href="#" class="mm_s1_link w-inline-block">
+        <div class="starting_menu_screen"><a data-w-id="084123cd-a75c-03a6-e163-401ddabae4cc" href="#"
+                class="mm_s1_link w-inline-block">
                 <div>Bachelor</div><img src="./ext_asset/62039bba9cd2dbd648e447a9_Group 1164.svg" loading="lazy"
                     alt="" class="mms1_arrow">
             </a><a data-w-id="084123cd-a75c-03a6-e163-401ddabae4d0" href="#"
@@ -4196,8 +4182,7 @@
                 class="mm_s1_link _3 w-inline-block">
                 <div>Certificate Programs</div><img src="./ext_asset/62039bba9cd2dbd648e447a9_Group 1164.svg"
                     loading="lazy" alt="" class="mms1_arrow">
-            </a><a data-w-id="084123cd-a75c-03a6-e163-401ddabae4d4" href="#"
-                class="mm_s1_link w-inline-block">
+            </a><a data-w-id="084123cd-a75c-03a6-e163-401ddabae4d4" href="#" class="mm_s1_link w-inline-block">
                 <div>About</div><img src="./ext_asset/62039bba9cd2dbd648e447a9_Group 1164.svg" loading="lazy"
                     alt="" class="mms1_arrow">
             </a><a href="https://www.tomorrow.university/partners/main" class="mm_s1_link w-inline-block">
@@ -4235,8 +4220,7 @@
                         <div class="tb-18 nav">Financing Options</div><img
                             src="./ext_asset/61b353fa5ed1a16329d73763_Group 448.svg" loading="lazy" alt=""
                             class="dd_small_arrow">
-                    </a><a data-w-id="084123cd-a75c-03a6-e163-401ddabae4ff"
-                        href="#"
+                    </a><a data-w-id="084123cd-a75c-03a6-e163-401ddabae4ff" href="#"
                         class="n_dd_link_small _3 dn w-inline-block">
                         <div class="tb-18 nav">Work-Study Program</div><img
                             src="./ext_asset/61b353fa5ed1a16329d73763_Group 448.svg" loading="lazy" alt=""
@@ -4247,8 +4231,7 @@
         <div class="pm_screen">
             <div class="dd-links-wrap _2">
                 <div class="ba_pages_wrapper pm"><a data-w-id="084123cd-a75c-03a6-e163-401ddabae506"
-                        href="https://www.tomorrow.university/master-of-science-ce"
-                        class="n_dd_link w-inline-block">
+                        href="https://www.tomorrow.university/master-of-science-ce" class="n_dd_link w-inline-block">
                         <div class="n_dd_link_name">
                             <div class="tb-14 white nav">Master of Science (CE)</div>
                             <div class="tb-20 tb_white nav">Sustainability, Entrepreneurship,<br>and Technology</div>
@@ -4288,8 +4271,8 @@
                             <div class="tb-20 tb_white nav">View All Impact Certificates</div>
                         </div><img src="./ext_asset/61b353fa5ed1a16329d73763_Group 448.svg" loading="lazy"
                             alt="" class="n_dd_arrow">
-                    </a><img src="./ext_asset/635148adca77b970df74ea5b_image (5).png" loading="lazy"
-                        alt="" class="dd_nav_img">
+                    </a><img src="./ext_asset/635148adca77b970df74ea5b_image (5).png" loading="lazy" alt=""
+                        class="dd_nav_img">
                     <div class="gradient_overlay_nav"></div>
                 </div>
             </div>
@@ -4313,9 +4296,8 @@
                             class="dd_small_arrow">
                     </a><a data-w-id="084123cd-a75c-03a6-e163-401ddabae527"
                         href="https://www.tomorrow.university/blog" class="n_dd_link_small w-inline-block">
-                        <div class="tb-18 nav">Blog</div><img
-                            src="./ext_asset/61b353fa5ed1a16329d73763_Group 448.svg" loading="lazy" alt=""
-                            class="dd_small_arrow">
+                        <div class="tb-18 nav">Blog</div><img src="./ext_asset/61b353fa5ed1a16329d73763_Group 448.svg"
+                            loading="lazy" alt="" class="dd_small_arrow">
                     </a><a data-w-id="084123cd-a75c-03a6-e163-401ddabae52b"
                         href="https://www.tomorrow.university/events" class="n_dd_link_small w-inline-block">
                         <div class="tb-18 nav">Events</div><img
@@ -4387,7 +4369,7 @@
         style="display: none; visibility: hidden;" src="./ext_asset/382264440.html"></iframe><iframe
         owner="archetype" title="archetype" style="display: none; visibility: hidden;"
         src="./ext_asset/saved_resource(2).html"></iframe>
-        @yield('script')
+    @yield('script')
 </body>
 
 </html>
